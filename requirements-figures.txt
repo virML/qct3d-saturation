@@ -1,0 +1,11 @@
+# Environment for scripts/make_figures.py and scripts/build_online_resources.py.
+# With exactly these versions the six figures are reproduced byte-for-byte from data/derived/
+# (checked on Python 3.13). Other pandas/numpy versions give visually identical figures whose
+# PNG bytes can differ slightly.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+matplotlib==3.11.2
+reportlab==5.0.1
+openpyxl==3.1.5
+# Fonts: Liberation Sans/Serif (metric-compatible with Arial/Times), e.g. apt install fonts-liberation.

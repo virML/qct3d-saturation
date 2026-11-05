@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qct3d"
+version = "1.0.0"
+description = "Code for 'Quantum or just quantised? Angle-encoder saturation confounds ansatz and placement comparisons in hybrid models for 3D CT'"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scikit-learn", "PyYAML"]
+
+[project.optional-dependencies]
+models = ["torch", "pennylane"]
+preprocessing = ["torch", "SimpleITK"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

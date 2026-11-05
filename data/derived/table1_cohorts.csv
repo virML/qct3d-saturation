@@ -1,0 +1,14 @@
+Characteristic,Development cohort (RSNA-ICH),External cohort (Nellore)
+Source,Multi-institutional public challenge dataset,"Routine clinical studies, one government hospital, India"
+"Series analysed, n","3,889","1,200"
+"Patients, n","3,735","1,178"
+"Age, years, median (IQR)",n/r,50 (38–64)
+"Female sex, n (%)",n/r,411 (35.2)
+Scanner,Multiple institutions; n/r,Siemens SOMATOM go.Now
+"Tube voltage, kVp, median (IQR)",n/r,130 (130–130)
+"Slice thickness, mm, median (IQR)",5.0 (5.0–5.0),1.5 (1.5–1.5)
+"Slices per series, median (IQR)",33 (32–36),173 (163–183)
+Acquisition period,n/r,January–November 2025
+"Hemorrhage, n (%)","1,598 (41.1)",94 (7.8)
+"Any reported finding, n (%)",—,859 (71.6)
+Reference standard,Expert slice-level annotation,Structured radiology-report flags

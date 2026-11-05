@@ -1,0 +1,121 @@
+file,column,description
+nisq_ablation.csv,p_depol,Depolarising probability applied after each entangling gate
+nisq_ablation.csv,auroc,Area under the ROC curve
+nisq_ablation.csv,auprc,Area under the precision-recall curve
+nisq_ablation.csv,auroc_retained,AUROC divided by the noiseless AUROC
+nisq_ablation.csv,auprc_retained,AUPRC divided by the noiseless AUPRC
+stats_A_equivalence.csv,cell,"Comparison cell label: backbone, endpoint (abnormal_ = any finding, hemorrhag = hemorrhage) and budget where applicable"
+stats_A_equivalence.csv,delta,"Paired difference, quantum minus classical (or spatial minus pooled for Family B), in AUROC units"
+stats_A_equivalence.csv,lo90,Lower 90% interval bound of delta (TOST)
+stats_A_equivalence.csv,hi90,Upper 90% interval bound of delta (TOST)
+stats_A_equivalence.csv,p_tost,p-value of the two one-sided tests against a ±0.02 margin
+stats_A_equivalence.csv,equivalent,90% interval lies inside ±0.02
+stats_A_equivalence.csv,n,Number of paired observations (seeds or draws)
+stats_A_quantum_vs_classical.csv,cell,"Comparison cell label: backbone, endpoint (abnormal_ = any finding, hemorrhag = hemorrhage) and budget where applicable"
+stats_A_quantum_vs_classical.csv,delta,"Paired difference, quantum minus classical (or spatial minus pooled for Family B), in AUROC units"
+stats_A_quantum_vs_classical.csv,lo,Lower 95% t-interval bound of delta
+stats_A_quantum_vs_classical.csv,hi,Upper 95% t-interval bound of delta
+stats_A_quantum_vs_classical.csv,p,Nominal two-sided paired t-test p-value
+stats_A_quantum_vs_classical.csv,n,Number of paired observations (seeds or draws)
+stats_A_quantum_vs_classical.csv,q,Benjamini-Hochberg q-value within the comparison family
+stats_A_quantum_vs_classical.csv,sig_raw,p < 0.05
+stats_A_quantum_vs_classical.csv,sig_bh,q < 0.05
+stats_B_placement.csv,cell,"Comparison cell label: backbone, endpoint (abnormal_ = any finding, hemorrhag = hemorrhage) and budget where applicable"
+stats_B_placement.csv,delta,"Paired difference, quantum minus classical (or spatial minus pooled for Family B), in AUROC units"
+stats_B_placement.csv,lo,Lower 95% t-interval bound of delta
+stats_B_placement.csv,hi,Upper 95% t-interval bound of delta
+stats_B_placement.csv,p,Nominal two-sided paired t-test p-value
+stats_B_placement.csv,n,Number of paired observations (seeds or draws)
+stats_B_placement.csv,q,Benjamini-Hochberg q-value within the comparison family
+stats_B_placement.csv,sig_raw,p < 0.05
+stats_B_placement.csv,sig_bh,q < 0.05
+stats_C_india_label_budget.csv,cell,"Comparison cell label: backbone, endpoint (abnormal_ = any finding, hemorrhag = hemorrhage) and budget where applicable"
+stats_C_india_label_budget.csv,delta,"Paired difference, quantum minus classical (or spatial minus pooled for Family B), in AUROC units"
+stats_C_india_label_budget.csv,lo,Lower 95% t-interval bound of delta
+stats_C_india_label_budget.csv,hi,Upper 95% t-interval bound of delta
+stats_C_india_label_budget.csv,p,Nominal two-sided paired t-test p-value
+stats_C_india_label_budget.csv,n,Number of paired observations (seeds or draws)
+stats_C_india_label_budget.csv,q,Benjamini-Hochberg q-value within the comparison family
+stats_C_india_label_budget.csv,sig_raw,p < 0.05
+stats_C_india_label_budget.csv,sig_bh,q < 0.05
+stats_C_sign_test.csv,n_cells,Number of Family C cells
+stats_C_sign_test.csv,n_favour_classical,Cells with delta < 0
+stats_C_sign_test.csv,n_favour_quantum,Cells with delta > 0
+stats_C_sign_test.csv,binomial_p_two_sided,Two-sided exact binomial p against 0.5
+sweep_lr_wd.csv,key,Run identifier (configuration string; contains no patient information)
+sweep_lr_wd.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+sweep_lr_wd.csv,lr,AdamW learning rate
+sweep_lr_wd.csv,wd,AdamW weight decay
+sweep_lr_wd.csv,encoder_norm,True if the angle encoder is conditioned (normalised before the bounded activation); False if unconditioned
+sweep_lr_wd.csv,seed,Training seed
+sweep_lr_wd.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+sweep_lr_wd.csv,pretanh,"Median absolute pre-activation |z| entering the bounding activation, after training"
+sweep_lr_wd.csv,minutes,Wall-clock training time (minutes)
+sweep_lr_wd.csv,auroc,Area under the ROC curve
+sweep_lr_wd.csv,ap,Average precision
+sweep_lr_wd.csv,prevalence,Positive fraction of the evaluation set
+sweep_lr_wd.csv,cal_brier,Brier score
+sweep_lr_wd.csv,cal_calibration_slope,Logistic calibration slope
+sweep_lr_wd.csv,cal_calibration_intercept,Logistic calibration intercept
+sweep_lr_wd.csv,cal_ece,Expected calibration error
+sweep_qubits.csv,key,Run identifier (configuration string; contains no patient information)
+sweep_qubits.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+sweep_qubits.csv,nq,Number of qubits (as text key)
+sweep_qubits.csv,encoder_norm,True if the angle encoder is conditioned (normalised before the bounded activation); False if unconditioned
+sweep_qubits.csv,seed,Training seed
+sweep_qubits.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+sweep_qubits.csv,family,"Ansatz family (Q1_sel, Q2, Q4) or spatial for the spatially applied construction"
+sweep_qubits.csv,minutes,Wall-clock training time (minutes)
+sweep_qubits.csv,auroc,Area under the ROC curve
+sweep_qubits.csv,ap,Average precision
+sweep_qubits.csv,prevalence,Positive fraction of the evaluation set
+sweep_qubits.csv,cal_brier,Brier score
+sweep_qubits.csv,cal_calibration_slope,Logistic calibration slope
+sweep_qubits.csv,cal_calibration_intercept,Logistic calibration intercept
+sweep_qubits.csv,cal_ece,Expected calibration error
+sweep_qubits.csv,n_qubits,Number of qubits
+sweep_qubits.csv,pretanh,"Median absolute pre-activation |z| entering the bounding activation, after training"
+sweep_qubits.csv,sat_frac,Fraction of pre-activations in the flat region of the bounding activation (|z| above the saturation threshold)
+sweep_qubits.csv,codes_seen,Number of distinct sign patterns realised on the evaluation set
+sweep_qubits.csv,codes_possible,2^n possible sign patterns for n qubits
+sweep_qubits.csv,codes_effective,Exponential of the Shannon entropy of the sign-pattern distribution
+sweep_qubits.csv,angle_within_code_ratio,Angle variance within sign patterns as a fraction of total angle variance
+sweep_qubits.csv,auroc_sign_bits,AUROC of a classifier given only the sign pattern
+sweep_qubits.csv,auroc_code_lut,AUROC of a lookup table mapping each sign pattern to its training-set positive rate
+table1_conditioning.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+table1_conditioning.csv,family,"Ansatz family (Q1_sel, Q2, Q4) or spatial for the spatially applied construction"
+table1_conditioning.csv,encoder_norm,True if the angle encoder is conditioned (normalised before the bounded activation); False if unconditioned
+table1_conditioning.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+table1_conditioning.csv,auroc_mean,Mean area under the ROC curve over seeds or draws
+table1_conditioning.csv,auroc_sd,Standard deviation of AUROC over seeds or draws
+table1_conditioning.csv,pretanh_median,"Median absolute pre-activation |z| entering the bounding activation, after training (quantum arm diagnostic)"
+table1_conditioning.csv,n_seeds,Number of training seeds
+table2_placement_and_arms.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+table2_placement_and_arms.csv,placement,Where the circuit is attached: pooled (after global pooling) or spatial (applied per spatial location)
+table2_placement_and_arms.csv,family,"Ansatz family (Q1_sel, Q2, Q4) or spatial for the spatially applied construction"
+table2_placement_and_arms.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+table2_placement_and_arms.csv,auroc_mean,Mean area under the ROC curve over seeds or draws
+table2_placement_and_arms.csv,auroc_sd,Standard deviation of AUROC over seeds or draws
+table2_placement_and_arms.csv,n_seeds,Number of training seeds
+table3_label_efficiency.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+table3_label_efficiency.csv,target,Endpoint: hemorrhage or abnormal_any (any reported finding)
+table3_label_efficiency.csv,k,Number of locally labelled training studies (label budget)
+table3_label_efficiency.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+table3_label_efficiency.csv,auroc_mean,Mean area under the ROC curve over seeds or draws
+table3_label_efficiency.csv,auroc_sd,Standard deviation of AUROC over seeds or draws
+table3_label_efficiency.csv,n_draws,Number of independent patient-grouped label draws
+table4_transfer.csv,backbone,"Frozen 3D CT encoder: B1_swinunetr_suprem (B1), B2 and B3 as defined in Section 3.2"
+table4_transfer.csv,mode,Transfer mode: adaptation depth (e.g. readout) or scratch (local labels only)
+table4_transfer.csv,k,Number of locally labelled training studies (label budget)
+table4_transfer.csv,arm,quantum = variational circuit adapter; classical = parameter-matched classical adapter
+table4_transfer.csv,auroc_mean,Mean area under the ROC curve over seeds or draws
+table4_transfer.csv,auroc_sd,Standard deviation of AUROC over seeds or draws
+table4_transfer.csv,n_draws,Number of independent patient-grouped label draws
+table5_transfer_matrix.csv,trained_on,Training cohort
+table5_transfer_matrix.csv,tested_on,Evaluation cohort
+table5_transfer_matrix.csv,auroc,Area under the ROC curve
+table5_transfer_matrix.csv,lo95,Lower 95% patient-clustered bootstrap bound
+table5_transfer_matrix.csv,hi95,Upper 95% patient-clustered bootstrap bound
+table1_cohorts.csv,Characteristic,Row label of Table 1
+table1_cohorts.csv,Development cohort (RSNA-ICH),"Aggregate value for the 3,889 analysed RSNA series (n/r: not recorded in the public release)"
+table1_cohorts.csv,External cohort (Nellore),"Aggregate value for the 1,200 analysed external series; age and sex once per patient"

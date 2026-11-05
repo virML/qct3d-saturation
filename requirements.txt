@@ -1,0 +1,33 @@
+# Environment for the notebooks and src/qct3d.
+#
+# Versions marked [run] were recorded by the notebooks' own version checks during the runs that
+# produced the paper's results (Google Colab, NVIDIA T4 GPU, CUDA 12.8 build of torch).
+# Versions marked [tested] were not recorded at run time; they are the versions this release was
+# tested with (tests/ and the equivalence checks described in README.md).
+#
+# On Colab, each notebook's install cell installs what that notebook needs; this file is for
+# running elsewhere. For a GPU, install the CUDA build of torch 2.11.0 from pytorch.org first.
+
+torch==2.11.0                 # [run]  (2.11.0+cu128 on Colab; 2.11.0+cpu in testing)
+pennylane==0.45.1             # [run]
+monai==1.6.0                  # [run]
+transformers==4.57.6          # [run]
+huggingface_hub==0.36.2       # [run]
+pydicom==3.0.2                # [run]
+pandas==2.2.3                 # [run]
+scikit-learn==1.6.1           # [run]
+SimpleITK==2.5.6              # [run]
+numpy==2.5.4                  # [tested]
+scipy==1.18.1                 # [tested]
+pyarrow==26.0.0               # [tested]
+matplotlib==3.11.2            # [tested]
+safetensors==0.8.0            # [tested]
+einops==0.8.2                 # [tested]
+pylibjpeg==2.1.0              # [tested]  DICOM codecs
+pylibjpeg-libjpeg==2.5.0      # [tested]
+pylibjpeg-openjpeg==2.6.0     # [tested]
+pyjpegls==1.5.1               # [tested]
+python-gdcm==3.2.6            # [tested]
+tqdm==4.70.1                  # [tested]
+PyYAML==6.0.3                 # [tested]  config.yaml
+pytest==9.2.0                 # [tested]  tests/

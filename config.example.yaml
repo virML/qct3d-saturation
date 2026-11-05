@@ -1,0 +1,33 @@
+# Paths used by every notebook. Copy this file to config.yaml (which git ignores) and edit it there.
+# Values may refer to other keys as {key}; relative paths are taken relative to drive_root.
+# The defaults reproduce the layout used for the paper: Google Colab with Google Drive mounted.
+
+drive_mount: /content/drive
+drive_root: /content/drive/MyDrive
+
+# ---- development cohort: RSNA 2019 Intracranial Hemorrhage Detection (public) -----------------
+# Folder holding the split archive parts/part_00000 ... and the challenge's stage_2_train.csv.
+rsna_archive_dir: "{drive_root}/rsna-ich"
+# Where notebook 01 writes features and every later notebook writes results and figures.
+rsna_output_dir: "{drive_root}/rsna_q3d_output"
+
+# ---- external cohort (protected health information; not distributed) -------------------------
+# Inputs prepared under the institutional data-sharing agreement.
+external_input_dir: "{drive_root}/external_input"
+external_matched_csv: "{external_input_dir}/external_matched_scans_CT.csv"
+# Study-to-report map for the hand-matched first tranche (formerly embedded in the notebook).
+external_part1_map_csv: "{external_input_dir}/part1_study_map.csv"
+# Root of the archive tree, laid out as <external_ct_root>/<MM>/<DD>.zip
+external_ct_root: "{drive_root}/external_ct/2025"
+# Where notebook 03 writes the external-cohort features for the three backbones.
+external_output_dir: "{drive_root}/nellore_q3d_output"
+# Optional fallback: Google Drive file IDs for the raw inputs, as {file name: id}. Keep empty in
+# any copy of this file that leaves the institution.
+external_drive_ids: {}
+
+# ---- cohort tables written by the first, Pillar-0 pass of notebook 03 -----------------------
+# The manifest (matched_table.parquet) that notebooks 04 and 07 read labels from lives here.
+pillar0_external_output_dir: "{drive_root}/nellore_pillar0_output_fithead"
+pillar0_external_output_dir_v1: "{drive_root}/nellore_pillar0_output"
+pillar0_rsna_archive_dir: "{drive_root}/kaggle/rsna-ich"
+pillar0_rsna_output_dir: "{drive_root}/pillar0_rsna_output"
