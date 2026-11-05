@@ -1,0 +1,35 @@
+{
+  "title": "qct3d-saturation: code and derived data for 'Quantum or just quantised? Angle-encoder saturation confounds ansatz and placement comparisons in hybrid models for 3D CT'",
+  "upload_type": "software",
+  "description": "<p>Analysis code (Colab notebooks and a small Python package) and the aggregate result tables behind every figure and table of the article <i>Quantum or just quantised? Angle-encoder saturation confounds ansatz and placement comparisons in hybrid models for 3D CT</i> (submitted to Quantum Machine Intelligence). The release contains no patient-level data: the external cohort is protected health information and is available only under an institutional data-sharing agreement; the development cohort is the public RSNA 2019 Intracranial Hemorrhage Detection dataset.</p>",
+  "creators": [
+    {
+      "name": "Puvvada, Virinchi",
+      "affiliation": "Department of Data Science and Business Systems, SRM Institute of Science and Technology, Chennai, India",
+      "orcid": "0009-0009-4282-946X"
+    },
+    {
+      "name": "Meka, Maneesh",
+      "affiliation": "Department of Computing Technologies, SRM Institute of Science and Technology, Chennai, India",
+      "orcid": "0009-0004-0161-3607"
+    },
+    {
+      "name": "Dhanpal, Dhanalaxmi",
+      "affiliation": "Department of Radio-Diagnosis, A C Subba Reddy Government Medical College & Hospital, Nellore, India",
+      "orcid": "0009-0007-4373-2016"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "quantum machine learning",
+    "hybrid quantum-classical",
+    "variational quantum circuits",
+    "angle encoding",
+    "3D CT",
+    "intracranial hemorrhage",
+    "external validation"
+  ],
+  "version": "1.0.0",
+  "language": "eng"
+}
